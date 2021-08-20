@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EWAVE Front-end coding examination</title>
+
+	<!-- font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<!-- custom css -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<!-- header -->
+	<header>
+		<a href="#" class="logo">Rommelito's Cafe</a>
+
+		<input type="checkbox" id="menu-bar">
+		<label for="menu-bar" class="fas fa-bars"></label>
+
+		<!-- navbar -->
+		<nav class="navbar">
+			<a href="#home">home</a>
+			<a href="#about">about</a>
+		</nav>
+	</header>
+
+	<!-- carousel -->
+	<div style="margin-top: 100px;">
+		<div class="owl-carousel owl-theme">
+			<div class="item"><img src="images/pic-1.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-2.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-3.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-4.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-5.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-6.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-7.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-8.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-9.jpg" alt="Rommelito's Cafe"></div>			
+			<div class="item"><img src="images/pic-10.jpg" alt="Rommelito's Cafe"></div>
+		</div>
+	</div>
+
+	<!-- main content  -->
+	<section class="home" id="home">
+		<div class="content">
+			<h3>Welcome to Rommelito's Cafe</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit porro nam libero natus
+				error consequatur sed repudiandae eos quo?</p>
+			<p class="button-center"><a href="#" class="btn">See our menu</a></p>
+		</div>
+
+		<div class="image">
+			<img src="images/Coffee break-amico.png" alt="">
+		</div>
+	</section>
+
+	<!-- about -->
+	<section class="about" id="about">
+		<h1 class="heading"></h1>
+		<div class="column">
+			<div class="image">
+				<img src="images/Deconstructed food-pana.png" alt="">
+			</div>
+			<div class="content">
+				<h3>Every menu is worth trying</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla placeat deserunt saepe repudiandae
+					veniam soluta minima dolor hic aperiam iure.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quaerat. Dolorem ratione saepe magni
+					quo inventore porro ab voluptates eos, nam eius provident accusantium, quia similique est, repellendus et
+					reiciendis.</p>
+				<div class="buttons">
+					<a href="#" class="btn">Try our new menus</a>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<button id="topBtn">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+
+	<!-- footer -->
+	<footer>
+		<p>Copyright &copy; 2021 Rommel Torquator</p>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript">	
+		$(document).ready(() => {
+			$(window).scroll(() => {
+				if($(this).scrollTop() > 40) {
+					$("#topBtn").fadeIn();
+				} else {
+					$("#topBtn").fadeOut();
+				}
+			})
+
+			$("#topBtn").click(() => {
+				$('html, body').animate(
+					{scrollTop: 0}, 800
+				)
+			})
+		})
+
+		$('.owl-carousel').owlCarousel({
+			loop: true,
+			margin: 10,
+			nav: false,
+			autoplay: true,
+			// stagePadding: 50,
+			// dots: false,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 3
+				},
+				1000: {
+					items: 5
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>
